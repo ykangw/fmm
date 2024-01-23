@@ -20,6 +20,9 @@ endif()
 execute_process(
   COMMAND python -c "from distutils.sysconfig import get_python_lib;print(get_python_lib())"
   OUTPUT_VARIABLE PYTHON_SITE_PACKAGES OUTPUT_STRIP_TRAILING_WHITESPACE)
+
+set(PYTHON_SITE_PACKAGES "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10")
+
 message(STATUS "Python packages ${PYTHON_SITE_PACKAGES}")
 
 set_source_files_properties(
